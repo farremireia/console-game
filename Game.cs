@@ -5,11 +5,9 @@ namespace ConsoleGame
     class Game : SuperGame
     {
 
-        // Update coordinates based on inputs, we use 'void' as it does not retun anything.
         public new static void UpdatePosition(string key, out int x, out int y)
         {
 
-            // Set the values for x and y variables in order to avoid errors.
             x = 0;
             y = 0;
 
@@ -44,7 +42,6 @@ namespace ConsoleGame
         //Allows the icon to change with each key pressed depending on direction.
         public new static char UpdateCursor(string key)
         {
-            // Set the variable in order to avoid errors. 
             char direction = '0';
 
             // SWITCH STATEMENT
@@ -66,7 +63,6 @@ namespace ConsoleGame
                     break;
             }
 
-            // We must return the direction to the program.
             return direction;
         }
 

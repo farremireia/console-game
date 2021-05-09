@@ -46,7 +46,6 @@ namespace ConsoleGame
         }
 
         // Change character position based on key
-        // Uses UpdatePosition()
         string key = cki.Key.ToString();
         int colChange = 0;
         int rowChange = 0;
@@ -55,16 +54,13 @@ namespace ConsoleGame
         characterRow += rowChange;
         
         // Update character symbol
-        // Uses UpdateCursor()
         cursor = Game.UpdateCursor(key);
 
         // Keep character in bounds
-        // Uses KeepInBounds()
         characterCol = Game.KeepInBounds(characterCol, cols);
         characterRow = Game.KeepInBounds(characterRow, rows);
         
         // Update score and fruit if player scored
-        // Uses DidScore()
         if (Game.DidScore(characterCol, characterRow, fruitCol, fruitRow))
         {
           score++;
